@@ -1,0 +1,19 @@
+.full-page__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  gap: 2rem;
+}
+.table-container {
+  border: 1px solid;
+  padding: 1rem;
+  width: 30%;
+}
+.top-section {
+  border: 1px solid;
+  padding: 1rem;
+  width: 25%;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/assets/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="full-page__container">
+      <section class="top-section">
+        <h1>Url Shrinker</h1>
+        <form action="/shortUrls" method="POST">
+          <label for="fullUrl">Url</label>
+          <input name="fullUrl" type="url" placeholder="Enter url..." />
+          <button type="submit">Shrink</button>
+        </form>
+      </section>
+      <table class="table-container">
+        <thead>
+          <tr>
+            <th>Full Url</th>
+            <th>Short Url</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% shortUrls.forEach(shortUrl=>{ %>
+
+          <tr>
+            <td>
+              <a href="<%= shortUrl.full%>"><%= shortUrl.full%></a>
+            </td>
+            <td><a href="<%= shortUrl.short%>"><%= shortUrl.short%></a></td>
+          </tr>
+          <% })%>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
